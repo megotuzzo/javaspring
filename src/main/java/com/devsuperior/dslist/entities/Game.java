@@ -14,28 +14,35 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
-    
+
     @Column(name = "game_year")
     private Integer year;
-    private String genre, platforms, imgUr;
+    private String genre;
+    private String platforms;
     private double score;
-    private String shortDesc, longDesc;
+    private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
+    private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
+    private String longDescription;
 
     public Game() {
 
     }
 
-    public Game(long id, String title, Integer year, String genre, String platforms, String imgUr, double score,
-            String shortDesc, String longDesc) {
+    public Game(long id, String title, Integer year, String genre, String platforms, double score, String imgUrl,
+            String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
         this.platforms = platforms;
-        this.imgUr = imgUr;
         this.score = score;
-        this.shortDesc = shortDesc;
-        this.longDesc = longDesc;
+        this.imgUrl = imgUrl;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
     }
 
     public long getId() {
@@ -78,12 +85,12 @@ public class Game {
         this.platforms = platforms;
     }
 
-    public String getImgUr() {
-        return imgUr;
+    public String getimgUrl() {
+        return imgUrl;
     }
 
-    public void setImgUr(String imgUr) {
-        this.imgUr = imgUr;
+    public void setimgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public double getScore() {
@@ -94,20 +101,20 @@ public class Game {
         this.score = score;
     }
 
-    public String getShortDesc() {
-        return shortDesc;
+    public String getshortDescription() {
+        return shortDescription;
     }
 
-    public void setShortDesc(String shortDesc) {
-        this.shortDesc = shortDesc;
+    public void setshortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
-    public String getLongDesc() {
-        return longDesc;
+    public String getlongDescription() {
+        return longDescription;
     }
 
-    public void setLongDesc(String longDesc) {
-        this.longDesc = longDesc;
+    public void setlongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
     @Override
