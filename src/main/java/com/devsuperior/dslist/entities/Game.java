@@ -85,11 +85,11 @@ public class Game {
         this.platforms = platforms;
     }
 
-    public String getimgUrl() {
+    public String getImgUrl() {
         return imgUrl;
     }
 
-    public void setimgUrl(String imgUrl) {
+    public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
 
@@ -101,19 +101,19 @@ public class Game {
         this.score = score;
     }
 
-    public String getshortDescription() {
+    public String getShortDescription() {
         return shortDescription;
     }
 
-    public void setshortDescription(String shortDescription) {
+    public void setShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
     }
 
-    public String getlongDescription() {
+    public String getLongDescription() {
         return longDescription;
     }
 
-    public void setlongDescription(String longDescription) {
+    public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
     }
 
